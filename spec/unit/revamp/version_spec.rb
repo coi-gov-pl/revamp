@@ -8,6 +8,6 @@ describe Revamp, '.version_prep' do
   end
   context 'on unstable version v1.2.3.pre' do
     subject { Revamp::version_prep '1.2.3.pre' }
-    it { expect(subject).to match /^1\.2\.3\.pre\.?(?:v\d+\.\d+\.\d+(?:\.\d+)?\.g)?(?:[0-9a-f]{7}(?:\.dirty)?)?$/ }
+    it { expect(subject).to match /^1\.2\.3\.pre\.?(?:v\d+\.\d+\.\d+(?:\.\d+\.g)?)?(?:[0-9a-f]{7})?(?:\.dirty)?$/ }
   end
 end

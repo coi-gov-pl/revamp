@@ -8,7 +8,7 @@ module Revamp
     version = desired
     if desired.match(/[^0-9\.]+/)
       git = `git describe --tags --dirty --always`
-      version += '.' + git.gsub('-', '.')
+      version += '.' + git.tr('-', '.')
     end
     version.strip
   end
@@ -23,6 +23,8 @@ module Revamp
   PACKAGE     = 'revamp'
   # A summary info
   SUMMARY     = 'Converts puppet module file to valid RPM or DEB package'
+  # A homepage for Herald
+  HOMEPAGE    = 'https://github.com/coi-gov-pl/gem-revamp'
   # A description info
   DESCRIPTION = <<-eos
   This module can convert standard puppet module file in form of tarball to
@@ -30,6 +32,4 @@ module Revamp
   system packages. The dependencies can be packaged inside the final system
   package or just referenced as dependencies.
   eos
-  # A homepage for Herald
-  HOMEPAGE    = 'https://github.com/coi-gov-pl/gem-revamp'
 end

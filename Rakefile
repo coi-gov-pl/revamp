@@ -58,7 +58,7 @@ tests << :coveralls if ENV['TRAVIS']
 desc 'Run lint, and all spec tests.'
 task test: tests
 
-desc 'Builds, and test package'
-task build: [:test, :gem]
+desc 'test package'
+task build: [:test]
 
 task default: :test
