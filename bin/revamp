@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+$0 = 'revamp'
+
+begin
+  require 'revamp/cli'
+rescue LoadError
+  require 'rubygems'
+  require 'revamp/cli'
+end
+
+# Process command line options and run Revamp
+Revamp::CLI.new.run!

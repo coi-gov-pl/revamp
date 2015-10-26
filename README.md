@@ -12,15 +12,15 @@ Install it yourself, globally as:
 
 The basic usage is really simple:
 
-    $ revamp coi-jboss-1.0.0.tar.gz
-    Converting to RPM puppetmodule_coi-jboss-1.0.0-0.noarch.rpm...
-    Files successfully converted: 1.
+    $ revamp -f coi-jboss-1.0.0.tar.gz
+    INFO: Converting to RPM package puppetmodule_coi-jboss-1.0.0-0.noarch.rpm...
+    INFO: Files successfully converted: 1.
 
 Or with extra options:
 
-    $ revamp --release 42 --outdir /tmp coi-jboss-1.0.0.tar.gz
-    Converting to RPM /tmp/puppetmodule_coi-jboss-1.0.0-42.noarch.rpm...
-    Files successfully converted: 1.
+    $ revamp --release 42 --outdir /tmp -f coi-jboss-1.0.0.tar.gz
+    INFO: Converting to RPM package /tmp/puppetmodule_coi-jboss-1.0.0-42.noarch.rpm...
+    INFO: Files successfully converted: 1.
 
 More on available options in help:
 
