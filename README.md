@@ -8,6 +8,10 @@ Install it yourself, globally as:
 
     $ sudo gem install revamp
 
+On Debian/Ubuntu systems to convert to RPM you will need also:
+
+    $ sudo apt-get install librpm-dev
+
 ## Usage
 
 The basic usage is really simple:

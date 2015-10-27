@@ -8,6 +8,7 @@ class Revamp::Application
     @outdir    = options[:outdir]
     @filenames = options[:filenames]
     @release   = options[:release]
+    @epoch     = options[:epoch]
     @format    = :rpm
   end
 
@@ -30,6 +31,7 @@ class Revamp::Application
              end
     filter.outdir  = @outdir
     filter.release = @release
+    filter.epoch   = @epoch
     filter
   end
 end

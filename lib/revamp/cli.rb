@@ -67,7 +67,8 @@ Usage: #{$PROGRAM_NAME} [options]
     Parser.new do |p|
       p.banner = banner
       p.version = Revamp::VERSION
-      p.option :release, 'A package release number, by default it is equal to \'0\'', default: '0'
+      p.option :release, 'A RPM release number, by default it is equal to \'0\'', default: '0'
+      p.option :epoch, 'A RPM epoch number, by default it is equal to \'6\'', default: '6'
       p.option(
         :outdir,
         'A directory to output converted packages, by default this is current directory: ' + Dir.pwd,
