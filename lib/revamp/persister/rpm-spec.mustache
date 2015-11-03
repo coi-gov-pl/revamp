@@ -1,0 +1,31 @@
+Name: {{ name }}
+Version: {{ model.version }}
+Release: {{ release }}
+Summary: {{ model.summary }}
+Source0: {{ rpm }}.tar.gz
+License: {{ model.license }}
+Group: Development
+BuildArch: noarch
+Provides: puppetmodule({{ model.slugname }})
+{{# has_requirements }}
+Requires: {{& requirements }}
+{{/ has_requirements }}
+%description
+{{ model.summary }}
+%prep
+%setup
+%build
+%install
+rm -rf $RPM_BUILD_ROOT
+mkdir -p ${RPM_BUILD_ROOT}/etc/puppet/modules
+cp -r %{_builddir}/{{ rpm }} ${RPM_BUILD_ROOT}%{_sysconfdir}/puppet/modules
+mv ${RPM_BUILD_ROOT}%{_sysconfdir}/puppet/modules/{{ rpm }} ${RPM_BUILD_ROOT}%{_sysconfdir}/puppet/modules/{{ model.rawname }}
+%clean
+%post
+%files
+%dir %{_sysconfdir}/puppet
+%dir %{_sysconfdir}/puppet/modules
+%dir %{_sysconfdir}/puppet/modules/{{ model.rawname }}
+{{# filenames }}
+%{_sysconfdir}/puppet/modules/{{ model.rawname }}/{{ . }}
+{{/ filenames }}

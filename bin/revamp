@@ -10,4 +10,4 @@ rescue LoadError
 end
 
 # Process command line options and run Revamp
-Revamp::CLI.new.run!
+Kernel.exit(Revamp::CLI.new.run!)

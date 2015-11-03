@@ -8,10 +8,8 @@ end
 
 # Top level module for Revamp
 module Revamp
-  @logger = Logger.new(STDOUT)
-  @logger.formatter = proc do |severity, _datetime, _progname, msg|
-    "#{severity}: #{msg}\n"
-  end
+  @logger = Logger.new($stdout)
+  @logger.formatter = proc { |severity, _datetime, _progname, msg| "#{severity}: #{msg}\n" }
   class << self
     # Logger for CLI interface
     # @return [Logger] logger for CLI
@@ -38,6 +36,26 @@ module Revamp
       bugo
     end
   end
+end
+
+# A module for modeles
+module Revamp::Model
+end
+
+# A module for mapper
+module Revamp::Mapper
+end
+
+# A module for persister
+module Revamp::Persister
+end
+
+# Parser module
+module Revamp::Parser
+end
+
+# A module for filters of persiters
+module Revamp::Filter
 end
 
 require 'revamp/version'

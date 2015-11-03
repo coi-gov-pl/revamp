@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
-  spec.add_dependency 'rpm', '0.0.4'
   spec.add_runtime_dependency 'micro-optparse', '~> 1.2.0'
+  spec.add_dependency 'mustache', '~> 1.0.2'
 end
