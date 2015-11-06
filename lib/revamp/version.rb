@@ -1,4 +1,4 @@
-# Main module of Pevamp app
+# Top level module for Revamp
 module Revamp
   # Prepare version
   #

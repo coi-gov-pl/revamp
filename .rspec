@@ -1,4 +1,4 @@
 --format
 d
 --colour
---backtrace
+--order rand

@@ -20,7 +20,7 @@ namespace :spec do
   desc 'Run integration spec tests.'
   RSpec::Core::RakeTask.new(:integration) do |t|
     t.pattern = [
-      'spec/zzz_integration'
+      'spec/integration'
     ]
   end
 end
