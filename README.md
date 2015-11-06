@@ -1,5 +1,7 @@
 # Revamp
 
+[![Build Status](https://travis-ci.org/coi-gov-pl/revamp.svg)](https://travis-ci.org/coi-gov-pl/revamp)
+
 This module can convert standard puppet module file in form of tarball to valid RPM or DEB package with all dependencies as references to other system packages. The dependencies can be packaged inside the final system package or just referenced as dependencies.
 
 ## Installation
