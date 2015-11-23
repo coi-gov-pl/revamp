@@ -19,6 +19,9 @@ group :development do
   gem 'pry-byebug',    '~> 3.2.0',  require: false if RUBY_VERSION > '2.0.0'
 end
 
+local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.ruby19')
+eval_gemfile local_gemfile if File.exist?(local_gemfile)
+
 local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.local')
 eval_gemfile local_gemfile if File.exist?(local_gemfile)
 

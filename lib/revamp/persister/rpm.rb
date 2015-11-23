@@ -34,7 +34,7 @@ class Revamp::Persister::Rpm
         out = $stdout if verbose
         pid = Process.spawn(command, chdir: directory, out: out, err: out)
         Process.wait pid
-        $CHILD_STATUS
+        $? # rubocop:disable SpecialGlobalVars
       end
     end
   end
