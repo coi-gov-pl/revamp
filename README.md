@@ -1,6 +1,6 @@
 # Revamp
 
-[![Build Status](https://travis-ci.org/coi-gov-pl/revamp.svg)](https://travis-ci.org/coi-gov-pl/revamp) [![Coverage Status](https://coveralls.io/repos/coi-gov-pl/revamp/badge.svg?branch=develop&service=github)](https://coveralls.io/github/coi-gov-pl/revamp?branch=develop)
+[![Build Status](https://travis-ci.org/coi-gov-pl/revamp.svg)](https://travis-ci.org/coi-gov-pl/revamp) [![Coverage Status](https://coveralls.io/repos/coi-gov-pl/revamp/badge.svg?branch=develop&service=github)](https://coveralls.io/github/coi-gov-pl/revamp?branch=develop) [![Code Climate](https://codeclimate.com/github/coi-gov-pl/revamp/badges/gpa.svg)](https://codeclimate.com/github/coi-gov-pl/revamp) [![Dependency Status](https://gemnasium.com/coi-gov-pl/revamp.svg)](https://gemnasium.com/coi-gov-pl/revamp)
 
 This module can convert standard puppet module file in form of tarball to valid RPM or DEB package with all dependencies as references to other system packages. The dependencies can be packaged inside the final system package or just referenced as dependencies.
 
