@@ -1,6 +1,7 @@
 require 'revamp'
 require 'tmpdir'
-require 'mustache'
+require 'erb'
+require 'ostruct'
 require 'rbconfig'
 require 'revamp/filter/puppetver2rpmreq'
 
@@ -80,10 +81,15 @@ class Revamp::Persister::Rpm
       FileUtils.mkdir_p(tmpdir.join(SPECS))
     end
 
+    def erbize(template, vars)
+      values = OpenStruct.new(vars).instance_eval { binding }
+      ERB.new(template).result(values)
+    end
+
     def write_spec
-      tpl = SELFDIR.join('rpm-spec.mustache')
+      tpl = SELFDIR.join('rpm-spec.erb')
       values = Hash[ATTRS.map { |key| [key, send(key)] }]
-      spec = Mustache.render(tpl.read, values)
+      spec = erbize(tpl.read, values)
       File.open(specfile_path, 'w') { |file| file.write(spec) }
     end
 
