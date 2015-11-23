@@ -53,7 +53,6 @@ tests = [
   :rubocop,
   :inch
 ]
-tests << :coveralls if ENV['TRAVIS']
 
 desc 'Run lint, and all spec tests.'
 task test: tests
