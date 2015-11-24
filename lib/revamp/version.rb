@@ -14,7 +14,7 @@ module Revamp
   end
 
   # Version for Herald
-  VERSION     = version_prep '0.1.0.pre'
+  VERSION     = version_prep '1.0.0'
   # Lincense for Herald
   LICENSE     = 'Apache-2.0'
   # Project name
