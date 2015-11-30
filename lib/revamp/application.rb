@@ -5,8 +5,15 @@ require 'revamp/parser/puppet-tarball'
 # A main application class
 class Revamp::Application
   def initialize(options)
-    @options   = options
-    @filenames = options[:filenames]
+    @options  = options
+    collected = nil
+    unless options[:filenames].nil? 
+      collected = []
+      options[:filenames].each do |file|
+        collected << Dir.glob(file)
+      end
+    end
+    @filenames = collected
     @format    = :rpm
   end
 
