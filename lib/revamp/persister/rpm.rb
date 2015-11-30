@@ -1,4 +1,5 @@
 require 'revamp'
+require 'pathname'
 require 'tmpdir'
 require 'erb'
 require 'ostruct'

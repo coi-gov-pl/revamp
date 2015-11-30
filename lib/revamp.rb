@@ -1,4 +1,5 @@
 require 'logger'
+require 'tempfile'
 
 begin
   require 'pry'
