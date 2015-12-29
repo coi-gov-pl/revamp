@@ -47,3 +47,5 @@ RSpec.configure do |c|
     mock.syntax = [:expect]
   end
 end
+
+require 'revamp'

@@ -6,7 +6,10 @@ Source0: <%= rpm %>.tar.gz
 License: <%= model.license %>
 Group: Development
 BuildArch: noarch
-Provides: puppetmodule(<%= model.slugname %>)
+Provides: puppetmodule(<%= model.slugname %>) = <%= model.version %>
+Provides: puppetmodule(<%= model.slugname %>) = <%= model.version %>-<%= release %>
+Provides: puppetmodule_<%= model.slugname %> = <%= model.version %>
+Provides: puppetmodule_<%= model.slugname %> = <%= model.version %>-<%= release %>
 <% if has_requirements %>Requires: <%= requirements %><% end %>
 %description
 <%= model.summary %>
