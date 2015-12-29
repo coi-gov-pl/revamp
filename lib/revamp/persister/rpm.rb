@@ -87,11 +87,14 @@ class Revamp::Persister::Rpm
       ERB.new(template).result(values)
     end
 
-    def write_spec
+    def generate_spec
       tpl = SELFDIR.join('rpm-spec.erb')
       values = Hash[ATTRS.map { |key| [key, send(key)] }]
-      spec = erbize(tpl.read, values)
-      File.open(specfile_path, 'w') { |file| file.write(spec) }
+      erbize(tpl.read, values)
+    end
+
+    def write_spec
+      File.open(specfile_path, 'w') { |file| file.write(generate_spec) }
     end
 
     def write_sources
