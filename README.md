@@ -12,7 +12,15 @@ Install it yourself, globally as:
 
 On Debian/Ubuntu systems to convert to RPM you will need also:
 
-    $ sudo apt-get install librpm-dev
+    $ sudo apt-get install -y rpm
+    
+On RHEL systems you will need also:
+
+    $ sudo yum install -y rpm-build
+    
+For convenience thare is a Docker image with system tools and revamp preinstalled: `coigovpl/revamp`. The usage is simply:
+
+    $ docker run --rm coigovpl/revamp revamp --help
 
 ## Usage
 
