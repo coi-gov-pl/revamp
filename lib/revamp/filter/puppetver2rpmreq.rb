@@ -15,8 +15,8 @@ class Revamp::Filter::PuppetVerToRpmReq
   end
 
   # Filters a Puppet version
-  # @param [puppetver] Revamp::Model::PuppetDependency
-  # @return String[]
+  # @param [puppetver] Revamp::Model::PuppetDependency a puppet dependency object
+  # @return String[] a array of puppet compatibile version specs
   def filter(puppetver)
     @slug = slugger.map(puppetver.name)
     reqs = []

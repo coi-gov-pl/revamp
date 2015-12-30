@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'revamp/persister/rpm'
 require 'rbconfig'
 
 describe Revamp::Persister::Rpm::CommandLine do

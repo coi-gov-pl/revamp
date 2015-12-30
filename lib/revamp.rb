@@ -25,7 +25,7 @@ module Revamp
       filepath = file.path
       file.close
       file.unlink
-      message = "v#{Revamp::VERSION}-#{ex.class}: #{ex.message}"
+      message = "v#{Revamp::VERSION} #{ex.class}: #{ex.message}"
       contents = message + "\n\n" + ex.backtrace.join("\n") + "\n"
       File.write(filepath, contents)
       bugo = {
@@ -37,26 +37,32 @@ module Revamp
       bugo
     end
   end
-end
+  # A module for modeles
+  module Model
+  end
 
-# A module for modeles
-module Revamp::Model
-end
+  # A module for mapper
+  module Mapper
+  end
 
-# A module for mapper
-module Revamp::Mapper
-end
+  # A module for persister
+  module Persister
+  end
 
-# A module for persister
-module Revamp::Persister
-end
+  # Parser module
+  module Parser
+  end
 
-# Parser module
-module Revamp::Parser
-end
-
-# A module for filters of persiters
-module Revamp::Filter
+  # A module for filters of persiters
+  module Filter
+  end
 end
 
 require 'revamp/version'
+require 'revamp/model/puppet-module'
+require 'revamp/mapper/puppet-name-slugger'
+require 'revamp/persister/rpm'
+require 'revamp/filter/puppetver2rpmreq'
+require 'revamp/parser/puppet-tarball'
+require 'revamp/application'
+require 'revamp/cli'
