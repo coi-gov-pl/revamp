@@ -113,7 +113,7 @@ describe Revamp::CLI do
           filenames: ["spec/fixtures/coi-sample-0.1.1.tar.gz"],
           verbose:   false,
           cleanup:   true,
-          clobber:   true
+          clobber:   false
         })
       end
     end
