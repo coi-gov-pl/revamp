@@ -112,7 +112,8 @@ describe Revamp::CLI do
           outdir:    "/tmp",
           filenames: ["spec/fixtures/coi-sample-0.1.1.tar.gz"],
           verbose:   false,
-          cleanup:   true
+          cleanup:   true,
+          clobber:   true
         })
       end
     end

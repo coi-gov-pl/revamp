@@ -80,6 +80,7 @@ Usage: #{$PROGRAM_NAME} [options]
       p.option :filenames, 'Files which will be processed', default: []
       p.option :verbose, 'Should print all information, by default: false', default: false
       p.option :cleanup, 'Should temporary files be cleaned up, by default: true', default: true
+      p.option :clobber, 'Should overwrite output converted packages, by default: true', default: true
     end
   end
 
