@@ -13,6 +13,7 @@ Provides: puppetmodule_<%= model.slugname %> = <%= model.version %>-<%= release 
 <% if has_requirements %>Requires: <%= requirements %><% end %>
 %description
 <%= model.summary %>
+%global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
 %prep
 %setup
 %build
