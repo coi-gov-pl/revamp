@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    revamp (1.1.1.pre)
+    revamp (1.1.2.pre)
       micro-optparse (~> 1.2.0)
 
 GEM
