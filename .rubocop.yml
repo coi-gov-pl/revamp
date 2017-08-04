@@ -3,6 +3,7 @@
 inherit_from: .rubocop_todo.yml
 
 AllCops:
+  TargetRubyVersion: 1.9
   Include:
     - 'lib/**/*.rb'
     - 'bin/*'
@@ -25,5 +26,6 @@ Metrics/MethodLength:
 
 Metrics/AbcSize:
   Max: 20
-Style/ClassAndModuleChildren: 
+
+Style/ClassAndModuleChildren:
   EnforcedStyle: compact

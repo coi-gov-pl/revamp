@@ -1,20 +1,7 @@
 # Top level module for Revamp
 module Revamp
-  # Prepare version
-  #
-  # @param desired [String] a desired version
-  # @return [String] a prepared version
-  def self.version_prep(desired)
-    version = desired
-    if desired.match(/[^0-9\.]+/)
-      git = `git describe --tags --dirty --always`
-      version += '.' + git.tr('-', '.')
-    end
-    version.strip
-  end
-
   # Version for Herald
-  VERSION     = version_prep '1.1.0'
+  VERSION     = '1.1.1'
   # Lincense for Herald
   LICENSE     = 'Apache-2.0'
   # Project name
