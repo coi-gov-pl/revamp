@@ -29,6 +29,7 @@ Provides: puppetmodule_puppetlabs-apache = 3.5.1-42
 Requires: puppetmodule(puppetlabs-concat) >= 1.0.5, puppetmodule(puppetlabs-concat) < 2.0.0
 %description
 Installs, configures, and manages Apache virtual hosts, web services, and modules.
+%global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
 %prep
 %setup
 %build

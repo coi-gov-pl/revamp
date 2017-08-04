@@ -11,6 +11,7 @@ group :test do
   gem 'inch',                      '~> 0.7.0',  require: false
   gem 'coveralls',                 '~> 0.8.9',  require: false
   gem 'codeclimate-test-reporter', '~> 0.4.8',  require: false
+  gem 'tins',                      '~> 1.6.0',  require: false if RUBY_VERSION < '2.0.0'
 end
 
 group :development do
@@ -20,9 +21,6 @@ group :development do
   gem 'guard-rubocop', '~> 1.2.0',  require: false
   gem 'pry-byebug',    '~> 3.2.0',  require: false if RUBY_VERSION > '2.0.0'
 end
-
-local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.ruby19')
-eval_gemfile local_gemfile if File.exist?(local_gemfile)
 
 local_gemfile = File.join(File.dirname(__FILE__), 'Gemfile.local')
 eval_gemfile local_gemfile if File.exist?(local_gemfile)
