@@ -1,7 +1,7 @@
 # Top level module for Revamp
 module Revamp
   # Version for Herald
-  VERSION     = '1.1.1'
+  VERSION     = '1.1.2.pre'
   # Lincense for Herald
   LICENSE     = 'Apache-2.0'
   # Project name
