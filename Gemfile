@@ -6,11 +6,11 @@ group :test do
   gem 'rake',                      '~> 10.4.0', require: false
   gem 'rspec',                     '~> 3.3.0',  require: false
   gem 'rspec-its',                 '~> 1.2.0',  require: false
-  gem 'simplecov',                 '~> 0.10.0', require: false
+  gem 'simplecov', '~> 0.12.0', require: false
   gem 'rubocop',                   '~> 0.34.0', require: false
   gem 'inch',                      '~> 0.7.0',  require: false
-  gem 'coveralls',                 '~> 0.8.9',  require: false
-  gem 'codeclimate-test-reporter', '~> 0.4.8',  require: false
+  gem 'coveralls', '~> 0.8.14', require: false
+  gem 'codeclimate-test-reporter', '~> 0.4.8', require: false
   gem 'tins',                      '~> 1.6.0',  require: false if RUBY_VERSION < '2.0.0'
 end
 
